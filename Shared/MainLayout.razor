@@ -1,0 +1,17 @@
+﻿@inherits LayoutComponentBase
+
+<div class="app-container d-flex flex-column min-vh-100">
+    <Header />
+
+    <main class="flex-fill">
+        <div class="container mt-4">
+            @Body
+        </div>
+    </main>
+
+    <Footer />
+</div>
+
+<div class="toast-wrapper">
+    <NotificationToast />
+</div>

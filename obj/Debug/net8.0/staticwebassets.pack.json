@@ -1,0 +1,205 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/open-iconic/FONT-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/open-iconic/ICON-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/open-iconic/README.md",
+      "PackagePath": "staticwebassets/css/open-iconic/README.md"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.eot"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.otf"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.svg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.ttf"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.woff"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/about-1.jpg",
+      "PackagePath": "staticwebassets/images/about-1.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/about-2.jpg",
+      "PackagePath": "staticwebassets/images/about-2.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/about-3.jpg",
+      "PackagePath": "staticwebassets/images/about-3.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/brand-1.png",
+      "PackagePath": "staticwebassets/images/brand-1.png"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/brand-2.png",
+      "PackagePath": "staticwebassets/images/brand-2.png"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/brand-3.png",
+      "PackagePath": "staticwebassets/images/brand-3.png"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/brand-4.png",
+      "PackagePath": "staticwebassets/images/brand-4.png"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/brand-5.png",
+      "PackagePath": "staticwebassets/images/brand-5.png"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/category-1.jpg",
+      "PackagePath": "staticwebassets/images/category-1.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/category-2.jpg",
+      "PackagePath": "staticwebassets/images/category-2.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/category-3.jpg",
+      "PackagePath": "staticwebassets/images/category-3.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/category-4.jpg",
+      "PackagePath": "staticwebassets/images/category-4.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/logo.png",
+      "PackagePath": "staticwebassets/images/logo.png"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/news-1.jpg",
+      "PackagePath": "staticwebassets/images/news-1.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/news-2.jpg",
+      "PackagePath": "staticwebassets/images/news-2.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/news-3.jpg",
+      "PackagePath": "staticwebassets/images/news-3.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/news-4.jpg",
+      "PackagePath": "staticwebassets/images/news-4.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/product-1.jpg",
+      "PackagePath": "staticwebassets/images/product-1.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/product-2.jpg",
+      "PackagePath": "staticwebassets/images/product-2.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/product-3.jpg",
+      "PackagePath": "staticwebassets/images/product-3.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/product-4.jpg",
+      "PackagePath": "staticwebassets/images/product-4.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/project-1.jpg",
+      "PackagePath": "staticwebassets/images/project-1.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/project-2.jpg",
+      "PackagePath": "staticwebassets/images/project-2.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/slide-1.jpg",
+      "PackagePath": "staticwebassets/images/slide-1.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/slide-2.jpg",
+      "PackagePath": "staticwebassets/images/slide-2.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/slide-3.jpg",
+      "PackagePath": "staticwebassets/images/slide-3.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/slide-4.jpg",
+      "PackagePath": "staticwebassets/images/slide-4.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/images/slide-5.jpg",
+      "PackagePath": "staticwebassets/images/slide-5.jpg"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/js/interop.js",
+      "PackagePath": "staticwebassets/js/interop.js"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/js/slider-init.js",
+      "PackagePath": "staticwebassets/js/slider-init.js"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/js/ticketHelpers.js",
+      "PackagePath": "staticwebassets/js/ticketHelpers.js"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/uploads/tickets/a93cc5de-3473-4073-8a76-94bbb8a5c7a6_Kế hoạch chuyển kho lần 2.xlsx",
+      "PackagePath": "staticwebassets/uploads/tickets/a93cc5de-3473-4073-8a76-94bbb8a5c7a6_Kế hoạch chuyển kho lần 2.xlsx"
+    },
+    {
+      "Id": "/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/wwwroot/uploads/tickets/dce30d20-42b4-401a-bf34-374371988c8d_about-2.jpg",
+      "PackagePath": "staticwebassets/uploads/tickets/dce30d20-42b4-401a-bf34-374371988c8d_about-2.jpg"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.DoAnTotNghiep.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.DoAnTotNghiep.props",
+      "PackagePath": "build\\DoAnTotNghiep.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.DoAnTotNghiep.props",
+      "PackagePath": "buildMultiTargeting\\DoAnTotNghiep.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.DoAnTotNghiep.props",
+      "PackagePath": "buildTransitive\\DoAnTotNghiep.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,404 @@
+@page "/admin/users"
+@page "/admin/users/page/{PageNumber:int}"
+@attribute [Authorize(Roles = "Admin")]
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@implements IDisposable
+@inject UserManager<IdentityUser> UserManager
+@inject NavigationManager Navigation
+
+<h3>Quản lý Người dùng</h3>
+
+<div class="d-flex flex-wrap align-items-center justify-content-between mb-3 gap-3">
+    <a href="/admin/users/create" class="btn btn-primary">
+        <i class="bi bi-person-plus me-1"></i> Tạo người dùng mới
+    </a>
+
+    <div class="ms-auto d-flex align-items-center gap-2" style="min-width:360px;">
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input @bind="searchTerm" @bind:event="oninput" class="form-control"
+                   placeholder="Nhập email hoặc tên đăng nhập..." aria-label="Tìm người dùng" />
+
+            <button class="btn btn-outline-primary" @onclick="SearchUsers" title="Tìm kiếm">
+                <i class="bi bi-filter-circle"></i> Tìm
+            </button>
+
+            <button class="btn btn-outline-secondary" @onclick="ClearSearch" title="Xóa lọc">
+                <i class="bi bi-x-circle"></i> Xóa
+            </button>
+        </div>
+    </div>
+</div>
+
+@if (pagedUsers == null)
+{
+    <p><em>Đang tải danh sách...</em></p>
+}
+else
+{
+    <div class="table-responsive shadow-sm rounded">
+        <table class="table table-striped align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Email / Tên đăng nhập</th>
+                    <th style="width:260px" class="text-end">Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (pagedUsers.Any())
+                {
+                    @foreach (var user in pagedUsers)
+                    {
+                        <tr>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <div class="fw-semibold">@user.Email</div>
+                                </div>
+                            </td>
+                            <td class="text-end">
+                                <div class="d-flex justify-content-end gap-2">
+                                    <a class="btn btn-sm btn-info"
+                                       href="@($"/admin/users/manage-roles/{user.Id}")"
+                                       title="Quản lý Quyền">
+                                        <i class="bi bi-shield-lock me-1"></i> Quyền
+                                    </a>
+
+                                    <button class="btn btn-sm btn-warning"
+                                            title="Đổi mật khẩu"
+                                            @onclick="() => ShowChangePasswordModal(user.Id, user.Email)">
+                                        <i class="bi bi-key me-1"></i> Đổi MK
+                                    </button>
+
+                                    @if (user.LockoutEnd.HasValue && user.LockoutEnd.Value > DateTimeOffset.UtcNow)
+                                    {
+                                        <button class="btn btn-sm btn-success"
+                                                title="Mở khóa tài khoản"
+                                                @onclick="async () => await UnblockUser(user.Id)">
+                                            <i class="bi bi-unlock me-1"></i> Mở khóa
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn btn-sm btn-outline-danger"
+                                                title="Khóa tài khoản"
+                                                @onclick="async () => await BlockUser(user.Id)">
+                                            <i class="bi bi-slash-circle me-1"></i> Khóa
+                                        </button>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="2" class="text-center text-muted">
+                            Không có người dùng phù hợp.
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PHÂN TRANG -->
+    @if (totalPages > 1)
+    {
+        <nav class="mt-3" aria-label="Page navigation">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <div>
+                    <a class="btn btn-outline-secondary btn-sm rounded-pill d-flex align-items-center"
+                       href="@($"/admin/users/page/{Math.Max(currentPage - 1, 1)}")"
+                       aria-disabled="@(currentPage == 1 ? "true" : "false")"
+                       title="Trang trước">
+                        <i class="bi bi-chevron-left me-1"></i> Trước
+                    </a>
+                </div>
+
+                <div class="d-flex align-items-center flex-wrap" style="gap:6px;">
+                    @{
+                        int maxButtons = 7;
+                        int start = Math.Max(1, currentPage - maxButtons / 2);
+                        int end = Math.Min(totalPages, start + maxButtons - 1);
+                        if (end - start + 1 < maxButtons)
+                        {
+                            start = Math.Max(1, end - maxButtons + 1);
+                        }
+                    }
+
+                    @if (start > 1)
+                    {
+                        <a class="btn btn-outline-secondary btn-sm rounded-pill" href="@($"/admin/users/page/1")">1</a>
+                        @if (start > 2)
+                        {
+                            <span class="text-muted px-2">…</span>
+                        }
+                    }
+
+                    @for (int i = start; i <= end; i++)
+                    {
+                        var pageNum = i;
+                        if (pageNum == currentPage)
+                        {
+                            <a class="btn btn-primary btn-sm rounded-pill"
+                               href="@($"/admin/users/page/{pageNum}")"
+                               aria-current="page">@pageNum</a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-outline-secondary btn-sm rounded-pill"
+                               href="@($"/admin/users/page/{pageNum}")">@pageNum</a>
+                        }
+                    }
+
+                    @if (end < totalPages)
+                    {
+                        if (end < totalPages - 1)
+                        {
+                            <span class="text-muted px-2">…</span>
+                        }
+                        <a class="btn btn-outline-secondary btn-sm rounded-pill"
+                           href="@($"/admin/users/page/{totalPages}")">@totalPages</a>
+                    }
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <a class="btn btn-outline-secondary btn-sm rounded-pill d-flex align-items-center"
+                       href="@($"/admin/users/page/{Math.Min(currentPage + 1, totalPages)}")"
+                       aria-disabled="@(currentPage == totalPages ? "true" : "false")"
+                       title="Trang sau">
+                        Sau <i class="bi bi-chevron-right ms-1"></i>
+                    </a>
+
+                    <div class="text-muted small">
+                        Trang <strong>@currentPage</strong> / <strong>@totalPages</strong>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    }
+}
+
+<!-- MODAL ĐỔI MẬT KHẨU -->
+@if (showChangePasswordModal)
+{
+    <div class="modal fade show d-block" tabindex="-1" style="background:rgba(0,0,0,.5)">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đổi mật khẩu cho @selectedUserEmail</h5>
+                    <button type="button" class="btn-close" @onclick="CloseChangePasswordModal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Mật khẩu mới</label>
+                        <input class="form-control" type="password" @bind="newPassword" />
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(changePasswordError))
+                    {
+                        <div class="alert alert-danger py-1 small">@changePasswordError</div>
+                    }
+                    @if (!string.IsNullOrEmpty(changePasswordSuccess))
+                    {
+                        <div class="alert alert-success py-1 small">@changePasswordSuccess</div>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" @onclick="CloseChangePasswordModal">Đóng</button>
+                    <button class="btn btn-primary" @onclick="ConfirmChangePassword">
+                        <i class="bi bi-check2-circle me-1"></i> Lưu mật khẩu
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<IdentityUser>? allUsers;
+    private IEnumerable<IdentityUser>? pagedUsers;
+
+    private string? searchTerm;
+
+    [Parameter]
+    public int PageNumber { get; set; } = 1;
+    private int currentPage = 1;
+    private int pageSize = 10;
+    private int totalPages = 1;
+    private int totalUsers = 0;
+
+    private readonly System.Threading.SemaphoreSlim _loadLock = new(1, 1);
+    private bool _disposed = false;
+
+    private bool showChangePasswordModal = false;
+    private string? selectedUserId;
+    private string? selectedUserEmail;
+    private string? newPassword;
+    private string? changePasswordError;
+    private string? changePasswordSuccess;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        currentPage = PageNumber > 0 ? PageNumber : 1;
+        await LoadUsers();
+    }
+
+    private async Task LoadUsers()
+    {
+        if (_disposed) return;
+
+        await _loadLock.WaitAsync();
+        try
+        {
+            var query = UserManager.Users.AsQueryable().AsNoTracking();
+
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                var term = searchTerm.Trim();
+                query = query.Where(u =>
+                    EF.Functions.Like(u.Email!, $"%{term}%") ||
+                    EF.Functions.Like(u.UserName!, $"%{term}%"));
+            }
+
+            allUsers = await query
+                .OrderBy(u => u.Email)
+                .ToListAsync();
+
+            totalUsers = allUsers.Count;
+            totalPages = (int)Math.Ceiling((double)totalUsers / pageSize);
+            if (totalPages == 0) totalPages = 1;
+
+            if (currentPage < 1) currentPage = 1;
+            if (currentPage > totalPages) currentPage = totalPages;
+
+            pagedUsers = allUsers
+                .Skip((currentPage - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("[UserManagement] LoadUsers error: " + ex);
+            throw;
+        }
+        finally
+        {
+            _loadLock.Release();
+        }
+    }
+
+    private async Task SearchUsers()
+    {
+        currentPage = 1;
+        PageNumber = 1;
+        await LoadUsers();
+    }
+
+    private async Task ClearSearch()
+    {
+        searchTerm = null;
+        currentPage = 1;
+        PageNumber = 1;
+        await LoadUsers();
+    }
+
+    private async Task ChangePage(int page)
+    {
+        if (page < 1) page = 1;
+        if (page > totalPages) page = totalPages;
+
+        currentPage = page;
+        Navigation.NavigateTo($"/admin/users/page/{currentPage}");
+        await LoadUsers();
+    }
+
+    private void ShowChangePasswordModal(string userId, string? email)
+    {
+        selectedUserId = userId;
+        selectedUserEmail = email;
+        newPassword = null;
+        changePasswordError = null;
+        changePasswordSuccess = null;
+        showChangePasswordModal = true;
+    }
+
+    private void CloseChangePasswordModal()
+    {
+        showChangePasswordModal = false;
+        selectedUserId = null;
+        selectedUserEmail = null;
+        newPassword = null;
+        changePasswordError = null;
+        changePasswordSuccess = null;
+    }
+
+    private async Task ConfirmChangePassword()
+    {
+        changePasswordError = null;
+        changePasswordSuccess = null;
+
+        if (string.IsNullOrWhiteSpace(selectedUserId))
+        {
+            changePasswordError = "Không xác định được người dùng.";
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(newPassword) || newPassword.Length < 6)
+        {
+            changePasswordError = "Mật khẩu mới phải có ít nhất 6 ký tự (hoặc theo rule bạn đặt).";
+            return;
+        }
+
+        var user = await UserManager.FindByIdAsync(selectedUserId);
+        if (user == null)
+        {
+            changePasswordError = "Người dùng không tồn tại.";
+            return;
+        }
+
+        var resetToken = await UserManager.GeneratePasswordResetTokenAsync(user);
+        var result = await UserManager.ResetPasswordAsync(user, resetToken, newPassword);
+
+        if (!result.Succeeded)
+        {
+            changePasswordError = string.Join("; ", result.Errors.Select(e => e.Description));
+            return;
+        }
+
+        changePasswordSuccess = "Đổi mật khẩu thành công.";
+        await LoadUsers();
+    }
+
+    private async Task BlockUser(string userId)
+    {
+        var user = await UserManager.FindByIdAsync(userId);
+        if (user == null) return;
+
+        user.LockoutEnabled = true;
+        await UserManager.SetLockoutEndDateAsync(user, DateTimeOffset.UtcNow.AddYears(100));
+
+        await UserManager.UpdateAsync(user);
+        await LoadUsers();
+    }
+
+    private async Task UnblockUser(string userId)
+    {
+        var user = await UserManager.FindByIdAsync(userId);
+        if (user == null) return;
+
+        await UserManager.SetLockoutEndDateAsync(user, null);
+        await UserManager.ResetAccessFailedCountAsync(user);
+
+        await UserManager.UpdateAsync(user);
+        await LoadUsers();
+    }
+
+    public void Dispose()
+    {
+        _disposed = true;
+        _loadLock.Dispose();
+    }
+}

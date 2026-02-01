@@ -1,0 +1,291 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DoAnTotNghiep
+build_property.RootNamespace = DoAnTotNghiep
+build_property.ProjectDir = /Users/lethien/Downloads/KBHomeProjectFinalDemo-main/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/lethien/Downloads/KBHomeProjectFinalDemo-main
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/CategoryEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQ2F0ZWdvcnlFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/CategoryManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQ2F0ZWdvcnlNYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/CreateUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQ3JlYXRlVXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/InventoryHistory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vSW52ZW50b3J5SGlzdG9yeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/LogisticsDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vTG9naXN0aWNzRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/OrderDetailAdmin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vT3JkZXJEZXRhaWxBZG1pbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/OrderManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vT3JkZXJNYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/ProductEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUHJvZHVjdEVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/ProductManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUHJvZHVjdE1hbmFnZW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/PurchaseOrderAdd.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUHVyY2hhc2VPcmRlckFkZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/PurchaseOrderDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUHVyY2hhc2VPcmRlckRldGFpbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/PurchaseOrderManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUHVyY2hhc2VPcmRlck1hbmFnZW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/ReturnReceiptDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUmV0dXJuUmVjZWlwdERldGFpbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/ReturnReceiptManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUmV0dXJuUmVjZWlwdE1hbmFnZW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/SalesDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vU2FsZXNEYXNoYm9hcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/ShipmentCreateDebug.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vU2hpcG1lbnRDcmVhdGVEZWJ1Zy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/StockAdjustments.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vU3RvY2tBZGp1c3RtZW50cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/StockTake.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vU3RvY2tUYWtlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/SupplierEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vU3VwcGxpZXJFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/SupplierManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vU3VwcGxpZXJNYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/TicketCategoryManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vVGlja2V0Q2F0ZWdvcnlNYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/TicketCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vVGlja2V0Q3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/TicketDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vVGlja2V0RGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/TicketList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vVGlja2V0TGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/TicketManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vVGlja2V0TWFuYWdlbWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/UserManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vVXNlck1hbmFnZW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/UserRoles.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vVXNlclJvbGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Admin/WarehouseDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vV2FyZWhvdXNlRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Checkout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2hlY2tvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/DevCartTest.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGV2Q2FydFRlc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/OrderConfirmation.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3JkZXJDb25maXJtYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/ProductDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVjdERldGFpbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Products.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVjdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/ProductsByCategory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVjdHNCeUNhdGVnb3J5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/SearchResults.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VhcmNoUmVzdWx0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/ShoppingCart.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hvcHBpbmdDYXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/CategoryMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0NhdGVnb3J5TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/FeatureCard.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0ZlYXR1cmVDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/FilterControls.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0ZpbHRlckNvbnRyb2xzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0Zvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0hlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/HeroSlider.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0hlcm9TbGlkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/LoadingSpinner.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0xvYWRpbmdTcGlubmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/LoginDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0xvZ2luRGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/LogoutButton.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0xvZ291dEJ1dHRvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/NotificationToast.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05vdGlmaWNhdGlvblRvYXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/PageLoadingIndicator.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1BhZ2VMb2FkaW5nSW5kaWNhdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1JlZGlyZWN0VG9Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/RedirectToLogout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1JlZGlyZWN0VG9Mb2dvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/SearchForm.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1NlYXJjaEZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Shared/TicketNotification.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1RpY2tldE5vdGlmaWNhdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lethien/Downloads/KBHomeProjectFinalDemo-main/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
