@@ -35,17 +35,14 @@ namespace DoAnTotNghiep
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Connection string
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
 
-            // Use DbContextFactory
             services.AddDbContextFactory<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
             services.AddScoped(provider =>
                 provider.GetRequiredService<IDbContextFactory<ApplicationDbContext>>().CreateDbContext());
 
-            // Identity configuration
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
@@ -115,14 +112,14 @@ namespace DoAnTotNghiep
                 };
             });
 
-            // Compression
+           
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes
                     .Concat(new[] { "application/octet-stream" });
             });
 
-            // HttpClient
+            
             services.AddHttpClient("ServerAPI", client =>
             {
                 client.BaseAddress = new Uri(Configuration["ServerApiBaseAddress"] ?? "https://localhost:5001/");
@@ -184,7 +181,7 @@ namespace DoAnTotNghiep
                 });
             }
 
-            // Swagger
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -234,9 +231,7 @@ namespace DoAnTotNghiep
 
             app.UseHttpsRedirection();
 
-            // ============================
-            // ✅ FIX FULL CSP HERE
-            // ============================
+            
             app.Use(async (context, next) =>
             {
                 context.Response.Headers["X-Content-Type-Options"] = "nosniff";
@@ -248,19 +243,19 @@ namespace DoAnTotNghiep
                 context.Response.Headers["Content-Security-Policy"] =
                     "default-src 'self'; " +
 
-                    // JS
+                   
                     "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; " +
 
-                    // CSS
+                    
                     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; " +
 
-                    // Fonts 
+                    
                     "font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; " +
 
-                    // Images
+                    
                     "img-src 'self' data: blob: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; " +
 
-                    // Blazor + Websocket
+                    
                     "connect-src 'self' https://localhost:* http://localhost:* ws://localhost:* wss://localhost:*; " +
 
                     "frame-ancestors 'none';";
